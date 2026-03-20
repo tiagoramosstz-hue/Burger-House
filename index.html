@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burger House | Gourmet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ── LOADING ────────────────────────────── -->
+  <div id="loading-overlay">
+    <div class="load-logo">Burger<span>House</span></div>
+    <span class="load-label">Preparando experiência</span>
+    <div class="load-track">
+      <div class="load-fill" id="load-fill"></div>
+    </div>
+  </div>
+
+  <!-- ── FIXED CANVAS BACKGROUND ───────────── -->
+  <canvas id="burger-canvas" class="canvas-float"></canvas>
+  <div id="canvas-overlay"></div>
+  <div id="canvas-glow"></div>
+
+  <!-- ── PAGE ──────────────────────────────── -->
+  <div class="page">
+
+    <!-- ════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════ -->
+    <section id="hero">
+
+      <!-- Header / Nav -->
+      <header>
+        <a href="#" class="logo">Burger<span>House</span></a>
+        <nav>
+          <a href="#hero">Home</a>
+          <a href="#products">Produtos</a>
+          <a href="#offers">Ofertas</a>
+          <a href="#">Contato</a>
+        </nav>
+        <a href="#products" class="nav-order">Ver Cardápio</a>
+      </header>
+
+      <!-- Hero text — LEFT side -->
+      <div class="hero-content">
+        <p class="tagline">Artesanal &nbsp;·&nbsp; Gourmet &nbsp;·&nbsp; Exclusivo</p>
+
+        <h1>
+          O Sabor<br />
+          que <em>Inspira</em><br />
+          Cada Mordida
+        </h1>
+
+        <p class="subtitle">
+          Ingredientes frescos, combinações únicas e uma experiência gastronômica inesquecível. Feito para quem exige o
+          melhor.
+        </p>
+
+        <div class="cta-group">
+          <a href="#products" class="btn-primary">Ver Cardápio</a>
+          <a href="#offers" class="btn-ghost">Ofertas →</a>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-num">40+</span>
+            <span class="stat-label">Sabores</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">99%</span>
+            <span class="stat-label">Aprovação</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">12</span>
+            <span class="stat-label">Anos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint removed – image animates automatically -->
+
+      <!-- Frame progress -->
+      <div class="frame-badge">
+        <div class="bar-track">
+          <div class="bar-fill" id="bar-fill"></div>
+        </div>
+        <span class="frame-count" id="frame-count">01</span>
+      </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════════
+         PRODUCTS
+    ════════════════════════════════════════ -->
+    <section id="products">
+      <div class="section-head">
+        <span class="section-label">Nosso Cardápio</span>
+        <h2 class="section-title">Escolha o Seu <em style="color:var(--gold);font-style:italic">Favorito</em></h2>
+        <p class="section-sub">Cada hambúrguer é montado na hora com ingredientes selecionados e muito amor.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Card 1 -->
+        <div class="product-card">
+          <div class="product-thumb"><img
+              src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&q=80&w=600"
+              alt="Classic Smash"></div>
+          <div class="product-body">
+            <span class="product-badge">Popular</span>
+            <div class="product-name">Classic Smash</div>
+            <div class="product-desc">Pão brioche, blend 180g, queijo cheddar americano, alface, tomate e molho especial
+              da casa.</div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">R$ 32</span>
+                <span class="product-price-old">38</span>
+              </div>
+              <button class="btn-add">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card">
+          <div class="product-thumb"><img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
+              alt="Black Angus"></div>
+          <div class="product-body">
+            <span class="product-badge">Chef's Pick</span>
+            <div class="product-name">Black Angus</div>
+            <div class="product-desc">Blend premium Black Angus 220g, queijo gouda defumado, caramelizada, bacon
+              artesanal e aioli trufado.</div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">R$ 52</span>
+              </div>
+              <button class="btn-add">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card">
+          <div class="product-thumb"><img
+              src="https://images.unsplash.com/photo-1525164286253-04e68b9d94c6?auto=format&fit=crop&q=80&w=600"
+              alt="Fire Crispy"></div>
+          <div class="product-body">
+            <span class="product-badge" style="background:#e74c3c;color:#fff">Picante</span>
+            <div class="product-name">Fire Crispy</div>
+            <div class="product-desc">Frango crispy, jalapeños em conserva, molho sriracha mayo, requeijão cremoso e
+              coleslaw picante.</div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">R$ 39</span>
+                <span class="product-price-old">45</span>
+              </div>
+              <button class="btn-add">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="product-card">
+          <div class="product-thumb"><img
+              src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&q=80&w=600"
+              alt="Green Soul"></div>
+          <div class="product-body">
+            <span class="product-badge" style="background:#2ecc71;color:#000">Vegano</span>
+            <div class="product-name">Green Soul</div>
+            <div class="product-desc">Blend de grão-de-bico e beterraba, queijo vegano, rúcula, tomate seco e pasta de
+              tahine.</div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">R$ 36</span>
+              </div>
+              <button class="btn-add">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="product-card">
+          <div class="product-thumb"><img
+              src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600"
+              alt="Double Cheese"></div>
+          <div class="product-body">
+            <div class="product-name">Double Cheese</div>
+            <div class="product-desc">Duplo blend 160g cada, triplo queijo (cheddar, gouda e brie), picles artesanais e
+              mostarda dijon.</div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">R$ 48</span>
+                <span class="product-price-old">56</span>
+              </div>
+              <button class="btn-add">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card">
+          <div class="product-thumb"><img
+              src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&q=80&w=600"
+              alt="Truffle King"></div>
+          <div class="product-body">
+            <span class="product-badge" style="background:rgba(201,168,76,.9);color:#000">Premium</span>
+            <div class="product-name">Truffle King</div>
+            <div class="product-desc">Blend wagyu 200g, cogumelos paris salteados, queijo gruyère, rúcula e óleo de
+              trufa negra.</div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">R$ 68</span>
+              </div>
+              <button class="btn-add">+</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         OFFERS
+    ════════════════════════════════════════ -->
+    <section id="offers">
+      <div class="section-head">
+        <span class="section-label">Promoções Imperdíveis</span>
+        <h2 class="section-title">Ofertas da <em style="color:var(--gold);font-style:italic">Semana</em></h2>
+        <p class="section-sub">Aproveite combos exclusivos e preços especiais por tempo limitado.</p>
+      </div>
+
+      <div class="offers-grid">
+
+        <!-- Featured Offer -->
+        <div class="offer-featured">
+          <div class="offer-featured-thumb"><img
+              src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?auto=format&fit=crop&q=80&w=800"
+              alt="Combo Smash Duplo"></div>
+          <span class="offer-tag">Oferta Limitada</span>
+          <h3 class="offer-name">Combo <em>Smash Duplo</em></h3>
+          <p class="offer-desc">Dois Classic Smash + batata frita grande + duas bebidas da sua escolha. A melhor
+            combinação da casa por um preço inacreditável.</p>
+          <div class="offer-price-row">
+            <span class="offer-price">R$ 59</span>
+            <span class="offer-price-old">R$ 89</span>
+            <span class="offer-discount">−34%</span>
+          </div>
+          <a href="#" class="btn-primary" style="width:fit-content">Pedir Agora</a>
+        </div>
+
+        <!-- Small Offer 1 -->
+        <div class="offer-card">
+          <div class="offer-card-thumb"><img
+              src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&q=80&w=600"
+              alt="Quarteto Gourmet"></div>
+          <div class="offer-card-body">
+            <div class="offer-card-label">Combo Família</div>
+            <div class="offer-card-name">Quarteto Gourmet</div>
+            <div class="offer-card-desc">4 hambúrgueres à escolha + 4 batatas + 4 refris. Perfeito para uma noite em
+              família.</div>
+          </div>
+          <div class="offer-card-price">
+            <span class="now">R$ 149</span>
+            <span class="was">R$ 214</span>
+          </div>
+        </div>
+
+        <!-- Small Offer 2 -->
+        <div class="offer-card">
+          <div class="offer-card-thumb"><img
+              src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=600"
+              alt="Burger Milkshake"></div>
+          <div class="offer-card-body">
+            <div class="offer-card-label">Happy Hour — Seg a Sex</div>
+            <div class="offer-card-name">Burger + Milkshake</div>
+            <div class="offer-card-desc">Qualquer hambúrguer + milkshake artesanal de qualquer sabor das 12h às 16h.
+            </div>
+          </div>
+          <div class="offer-card-price">
+            <span class="now">R$ 44</span>
+            <span class="was">R$ 62</span>
+          </div>
+        </div>
+
+        <!-- Small Offer 3 -->
+        <div class="offer-card">
+          <div class="offer-card-thumb"><img
+              src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&q=80&w=600"
+              alt="Brinde Especial"></div>
+          <div class="offer-card-body">
+            <div class="offer-card-label">Aniversário</div>
+            <div class="offer-card-name">Brinde Especial</div>
+            <div class="offer-card-desc">No seu aniversário, ganhe uma mini sobremesa de brownie + sorvete de graça com
+              qualquer pedido.</div>
+          </div>
+          <div class="offer-card-price">
+            <span class="now">Grátis</span>
+            <span class="was">R$ 18</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════ -->
+    <footer>
+      <div class="footer-logo">Burger<span>House</span></div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#products">Produtos</a>
+        <a href="#offers">Ofertas</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+      </div>
+      <span class="footer-copy">© 2026 BurgerHouse — Premium Gourmet</span>
+    </footer>
+
+  </div><!-- /page -->
+
+  <!-- ================================================================
+       SCRIPT
+  ================================================================ -->
+  <script>
+    // ──────────────────────────────────────────
+    // Config
+    // ──────────────────────────────────────────
+    const TOTAL_FRAMES = 40;
+    const FRAME_DIR = 'img_hamburguer/';
+    const FRAME_PREFIX = 'ezgif-frame-';
+
+    const framePaths = Array.from({ length: TOTAL_FRAMES }, (_, i) => {
+      const n = String(i + 1).padStart(3, '0');
+      return `${FRAME_DIR}${FRAME_PREFIX}${n}.jpg`;
+    });
+
+    const canvas = document.getElementById('burger-canvas');
+    const ctx = canvas.getContext('2d');
+    const barFill = document.getElementById('bar-fill');
+    const frameCnt = document.getElementById('frame-count');
+    const loadFill = document.getElementById('load-fill');
+    const overlay = document.getElementById('loading-overlay');
+
+    let images = [];
+    let loadedCount = 0;
+    let currentF = 0;     // smooth float
+    let targetF = 0;     // integer target
+    let autoPlay = true;
+    let autoDir = 1;
+    let lastAutoTs = 0;
+    const AUTO_FPS = 16;
+    let scrollTO = null;
+    let accumScroll = 0;
+    const SENS = 7;
+
+    // ── Resize canvas to full window ─────────
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      if (images[Math.round(currentF)]) drawFrame(Math.round(currentF));
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // ── Draw frame — image sits on RIGHT side ─
+    // We use "contain to right 65% of canvas" so burger shows big on right
+    function drawFrame(index) {
+      const img = images[index];
+      if (!img || !img.naturalWidth) return;
+
+      const iW = img.naturalWidth;
+      const iH = img.naturalHeight;
+      const cW = canvas.width;
+      const cH = canvas.height;
+
+      // Draw on right portion: the burger fills approx right 70%
+      const zoneW = cW * 0.75;
+      const zoneH = cH;
+      const scale = Math.max(zoneW / iW, zoneH / iH) * 1.02;
+      const dW = iW * scale;
+      const dH = iH * scale;
+      // anchor right edge of canvas
+      const dx = cW - dW + (dW - zoneW) / 2;
+      const dy = (cH - dH) / 2;
+
+      ctx.clearRect(0, 0, cW, cH);
+      ctx.drawImage(img, dx, dy, dW, dH);
+
+      const pct = ((index + 1) / TOTAL_FRAMES) * 100;
+      barFill.style.width = `${pct}%`;
+      frameCnt.textContent = String(index + 1).padStart(2, '0');
+    }
+
+    // ── Lerp loop ────────────────────────────
+    function lerpLoop() {
+      const diff = targetF - currentF;
+      if (Math.abs(diff) > 0.015) {
+        currentF += diff * 0.11;
+        drawFrame(Math.round(currentF));
+      }
+      requestAnimationFrame(lerpLoop);
+    }
+
+    // ── Auto ping-pong ───────────────────────
+    function autoPingPong(ts) {
+      if (!autoPlay) { requestAnimationFrame(autoPingPong); return; }
+      if (ts - lastAutoTs >= 1000 / AUTO_FPS) {
+        lastAutoTs = ts;
+        targetF += autoDir;
+        if (targetF >= TOTAL_FRAMES - 1) { targetF = TOTAL_FRAMES - 1; autoDir = -1; }
+        if (targetF <= 0) { targetF = 0; autoDir = 1; }
+      }
+      requestAnimationFrame(autoPingPong);
+    }
+
+    // Mouse scroll control removed – animation runs automatically only
+
+    // ── Preload ──────────────────────────────
+    function preload() {
+      framePaths.forEach((src, i) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = img.onerror = () => {
+          loadedCount++;
+          const p = (loadedCount / TOTAL_FRAMES) * 100;
+          loadFill.style.width = `${p}%`;
+          if (loadedCount === TOTAL_FRAMES) {
+            setTimeout(() => {
+              overlay.classList.add('hidden');
+              lerpLoop();
+              requestAnimationFrame(autoPingPong);
+            }, 450);
+          }
+        };
+        images[i] = img;
+      });
+    }
+    preload();
+
+    // ── Intersection observer: hide fixed canvas
+    //    when scrolled far past hero ────────────
+    const heroEl = document.getElementById('hero');
+    const io = new IntersectionObserver(entries => {
+      // keep canvas visible always for depth effect
+    }, { threshold: 0 });
+    io.observe(heroEl);
+
+    // ── Subtle parallax on canvas while scrolling ─
+    window.addEventListener('scroll', () => {
+      const sy = window.scrollY;
+      canvas.style.transform = `scale(1) translateY(${sy * 0.25}px)`;
+    });
+  </script>
+</body>
+
+</html>
